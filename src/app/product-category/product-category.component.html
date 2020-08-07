@@ -1,0 +1,27 @@
+<div fxLayout="row" >
+
+  <div fxLayout="column" id="category" fxLayoutGap="-14%" >
+
+    <div>
+      <p id="categoriesTitle"> See All Categories</p><br>
+    </div>
+
+    <div>
+    <mat-list dense *ngFor="let categories of categoryName" fxLayout="row" >
+      <div fxLayout="column" fxLayoutGap="4%" >
+          <mat-list-item  id="categorised"  >  {{categories.title}} </mat-list-item>
+      </div>
+      <div>
+          <mat-icon id="arrow" >play_arrow</mat-icon>
+      </div>
+
+
+
+
+     </mat-list>
+
+
+     </div>
+
+  </div>
+  </div>

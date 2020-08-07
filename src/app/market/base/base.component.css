@@ -1,0 +1,17 @@
+.base-wrapper{
+  min-height: calc(100vh - 93px);
+}
+
+.header{
+
+}
+mat-sidenav-container{
+  height: 100%;
+
+}
+mat-sidenav,mat-sidenav-content{
+  padding: 16px;
+}
+mat-sidenav{
+  background-color: lightcoral
+}

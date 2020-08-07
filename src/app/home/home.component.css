@@ -1,0 +1,169 @@
+
+#container{
+  width: 50%
+}
+.categories{
+  text-indent: 240px;
+  text-align: center;
+  top: -35px;
+  line-height: 1px
+}
+.categories:hover{
+  cursor:pointer;
+  color:  darkblue;
+}
+.categories:active{
+  cursor:pointer;
+   color:  #119bd1ef;
+}
+
+#container{
+  width: 100%;
+  margin: 5em auto;
+  padding: 0;
+  background: #fff;
+}
+.items{
+  max-width: 300px;
+  height: 300px;
+  background: #474242;
+}
+#left,#right{
+  margin: 30px;
+
+}
+.example-card {
+  max-width: 210px;
+  max-height: 304px;
+  box-shadow: 1px 1px 4px 0px black;
+  border-radius: 7px;
+  border-bottom: 2px solid;
+  margin: 3px 11px;
+  margin-left: 121
+}
+
+
+
+
+
+
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.disableCorl{
+  color: red;
+  cursor:not-allowed;
+}
+#desp{
+  margin-top: -6%;
+  margin-left: -3px;
+  font-size: 14px;
+  font-family: none;
+  font-weight: 100;
+  font-style: oblique;
+}
+#images{
+  width: 171px;
+  height: 176px;
+  margin-top: 23px;
+  margin-left: 3px;
+  border-radius: 3px;
+}
+
+
+#title{
+  margin-left: 12px;
+  margin-top: 4px;
+  font-size: 19px;
+  font-family: monospace;
+  font-weight: 700;
+  font-style: inherit;
+  color: #1f0404;
+  width: 164px;
+  text-align: center;
+}
+#discount{
+  font-size: 24px;
+  border: 1px solid #ffffff;
+  height: 34px;
+  color: white;
+  box-shadow: 1px 2px 5px -1px #0c0101;
+  border-radius: 10px 0px 0px 10px;
+  font-family: unset;
+  background: #982121;
+  margin-top: -136px;
+  margin-left: 98px;
+  width: 96px;
+}
+#money{
+  font-size: 14px;
+  margin-top: -18px;
+  font-family: -webkit-body;
+  text-align: center;
+  margin-left: 39px;
+}
+#new{
+  font-size: 18px;
+  margin-left: 151px;
+  margin-top: -62px;
+  background: #100b1b;
+  color: white;
+  width: 88px;
+  text-align: center;
+  height: 29px;;
+}
+
+#addToCart{
+  color: white;
+  margin-left: 43px;
+  height: 24px;
+  background: #e9722c;
+  font-size: 15px;
+  width: 103px;
+  border-radius: 3px;
+  border: 1px solid;
+  margin-top: -26px;
+}
+#preview{
+  margin-left: 134px;
+  border: 0px solid white;
+  box-shadow: 1px 1px 3px 0px black;
+  height: 36px;
+  width: 102px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: -1px;
+}
+
+
+#wishList{
+  margin-left: 69px;
+  color: #2b89b0;
+}
+#siteNews{
+  margin-left: 51px;
+  margin-top: 72px;
+  border: 1px solid #b1abab;
+  width: 257px;
+  height: 221px;
+}
+.news{
+  width: 254px;
+  margin-top: -16px;
+  border: 1px dotted;
+  background: #f4f4f4;
+}
+#site{
+  color: #030310;
+  margin-top: 26px;
+  background: #b1abab;
+
+}
+
+.spans{
+  color:blue;
+
+}

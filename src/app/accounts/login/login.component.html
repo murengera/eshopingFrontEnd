@@ -1,0 +1,82 @@
+<div fxLayoutAlign="center" fxLayout="column">
+  <div fxLayoutAlign="center">
+<span style="margin-top: 5%;font-size:20px;font-family: 'Courier New', Courier, monospace;font-style: italic;">Eshoping</span>
+  </div>
+
+<div fxLayoutAlign="center">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title> Sign-In</mat-card-title>
+        </mat-card-header>
+
+                <mat-card-content fxLayout="column" [formGroup]="formGroups" (ngSubmit)="onSubmit(formGroups.value)">
+
+                  <div>
+                    <span style="font-weight: bold;font-size:12px;">Phone number</span>
+                      <input class="email" type="text" formControlName="phone_number">
+                      <mat-error *ngIf="!formGroups.get('phone_number').valid && formGroups.get('phone_number').touched">
+                        {{ PhonenumberRequired }}
+                      </mat-error>
+                  </div>
+                 <br>
+                  <div>
+                    <div fxLayout="row" fxLayoutGap="120px">
+                      <div>
+                          <span style="font-weight: bold;font-size:12px;">Password</span>
+                      </div>
+                      <div>
+                        <a  style="font-weight: bold;font-size:12px;font-family: Arial,sans-serif;text-decoration: none" routerLink="/forget-password" target="_blank" rel="noopener noreferrer">Forget your Password</a>
+
+                      </div>
+                    </div>
+
+                      <input class="email"  type="password" formControlName="password">
+                      <mat-error *ngIf="!formGroups.get('password').valid && formGroups.get('password').touched">
+                        {{ passwordRequired }}
+                      </mat-error>
+                  </div>
+
+
+                  <div>
+                      <button   id="button" *ngIf="!loading"  type="submit" (click)="onSubmit(formGroups.value)"><span>Continue</span></button>
+                      <mat-spinner diameter="40" class="loading-indicator" *ngIf="loading"> </mat-spinner>
+
+                  </div>
+                  <div>
+                    <span style="margin-top: 28px!important;font-size: 12px!important;line-height: 1.5!important;font-family: Arial,sans-serif;text-decoration: none" >By continuing,you agree to eShoping <a href="#">Conditions of Use <a href="#" style="text-decoration:none" target="_blank" rel="noopener noreferrer">Privacy Notice</a>  </a></span>
+                  </div>
+
+
+
+
+                </mat-card-content>
+
+              </mat-card>
+</div>
+
+<div fxLayoutAlign="center">
+    <fieldset id="fieldset">
+        <legend>New to eShoping?</legend>
+
+<button type="submit"  routerLink="/register" id="newAccout" >Create your Eshoping Account</button>
+        </fieldset>
+</div>
+
+<hr>
+<mat-divider></mat-divider>
+  <ul fxLayoutAlign="center" fxLayoutGap="2%" fxLayout="row" style="    font-size: 11px!important;line-height: 1.465!important;list-style:none;">
+    <li ><a style="text-decoration:none" href="#">Conditions of Use </a></li>
+    <li> <a style="text-decoration:none"  href="#">Privacy Notice</a></li>
+    <li><a style="text-decoration:none" href="#">Help</a></li>
+  </ul>
+  <div fxLayoutAlign="center">
+    <span><footer style="font-size: 11px!important;
+      line-height: 1.465!important;color: #555!important;">&copy;2020,Eshoping.com </footer>
+    </span>
+  </div>
+
+
+</div>
+
+
+

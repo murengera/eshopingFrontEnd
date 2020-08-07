@@ -1,0 +1,78 @@
+#table
+{
+  margin-top: 115px;
+  margin-left: 367px;
+  color: #083033;
+  border: 1px solid #513464;
+  box-sizing: border-box;
+   box-shadow:1px -2px 7px 1px #392121;
+}
+
+.headerTitle{
+  color: #f1f0f0;
+  background: #0f0c17;
+}
+#Headerimages{
+  height: 73px;
+  margin-top: 10px;
+  margin-left: -2px;
+  width: 170px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px -1px #0e0d0d
+}
+
+#delete{
+
+  cursor: pointer;
+  color: red;
+  border: 1px solid red;
+  width: 103px;
+  height: 0px;
+}
+#number{
+
+  width: 66px;
+  text-align: center;
+  background: black;
+  color: wheat;
+}
+#headerTtile{
+  color: #dac3c3;
+  margin-left: 2px;
+  font-size: 30px;
+  background-color: #536e70;
+  width: 135px;
+  margin-top: 15px;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px #235561;
+  border-radius: 5px;
+
+}
+#headerSubTitle{
+
+}
+#total{
+
+}
+#descrease{
+border-left: 1px solid #dee2e6;
+border-right: 1px solid #dee2e6;
+border-bottom: 1px solid #dee2e6;
+font-weight: bold;
+font-size: 1.3rem;
+text-align: center;
+ background: red;
+color: white;
+}
+#increase{
+  border-left: 1px solid #dee2e6;
+border-right: 1px solid #dee2e6;
+border-bottom: 1px solid #dee2e6;
+font-weight: bold;
+font-size: 1.3rem;
+text-align: center;
+background: #0b5403;
+color: white;
+
+}

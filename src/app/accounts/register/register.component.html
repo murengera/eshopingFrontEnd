@@ -1,0 +1,94 @@
+
+<div fxLayoutAlign="center" fxLayout="column" >
+    <div fxLayoutAlign="center">
+  <span style="margin-top: 5%;font-size:20px;font-family: 'Courier New', Courier, monospace;font-style: italic;">Eshoping</span>
+    </div>
+
+  <div fxLayoutAlign="center">
+      <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title> Create Account</mat-card-title>
+          </mat-card-header>
+
+                  <mat-card-content fxLayout="column" [formGroup]="registrationFormGroup" (ngSubmit)="registerUser()"   >
+                      <div class="form-group">
+                          <span style="font-weight: bold;font-size:12px;">Your name</span>
+                            <input formControlName="name" class="emails" type="text" class="form-control">
+                            <mat-error  *ngIf="!registrationFormGroup.get('name').valid && registrationFormGroup.get('name').touched">
+                              name required
+                            </mat-error>
+                        </div>
+
+
+                        <div class="form-group">
+                            <span style="font-weight: bold;font-size:12px;">Email</span>
+                              <input formControlName="email" class="emails" type="email" class="form-control">
+                              <mat-error *ngIf="!registrationFormGroup.get('email').valid && registrationFormGroup.get('email').touched">
+                              Invalid email address
+                            </mat-error>
+                          </div>
+
+                    <div class="form-group">
+                      <span style="font-weight: bold;font-size:12px;">Phone number</span>
+                        <input  formControlName="phone_number"class="emails" type="text" class="form-control">
+                        <mat-error *ngIf="!registrationFormGroup.get('phone_number').valid && registrationFormGroup.get('phone_number').touched">
+                        Valid phone number required
+                      </mat-error>
+                    </div>
+                   <br>
+
+
+                        <div class="form-group">
+                            <span style="font-weight: bold;font-size:12px;">Password</span>
+                            <input formControlName="password" class="emails"  type="password" class="form-control">
+                            <mat-error *ngIf="!registrationFormGroup.get('password').valid && registrationFormGroup.get('password').touched">
+                Password is required
+              </mat-error>
+                        </div>
+
+
+
+
+
+
+
+                    <div>
+                        <button  id="button" type="submit"  (click)="registerUser()" ><span >Create your Eshoping account</span></button>
+
+                    </div>
+                    <div>
+                      <span style="margin-top: 28px!important;font-size: 12px!important;line-height: 1.5!important;font-family: Arial,sans-serif;text-decoration: none" >By creating an account,you agree to eShoping <a href="#" style="text-decoration: none">Conditions of Use <a  href="#" style="text-decoration:none" target="_blank" rel="noopener noreferrer">Privacy Notice</a>  </a></span>
+                    </div>
+                    <div style="margin-bottom:2853px">
+
+                        <span >Already have an account? <a style="font-size: 12px!important;line-height: 1.5!important;font-family: Arial,sans-serif;text-decoration: none" routerLink="/login">Sign-In></a></span>
+                  </div>
+
+
+
+                  </mat-card-content>
+
+                </mat-card>
+  </div>
+
+
+
+  <hr>
+  <mat-divider></mat-divider>
+    <ul fxLayoutAlign="center" fxLayoutGap="2%" fxLayout="row" style="    font-size: 11px!important;line-height: 1.465!important;list-style:none;">
+      <li ><a style="text-decoration:none" href="#">Conditions of Use </a></li>
+      <li> <a style="text-decoration:none"  href="#">Privacy Notice</a></li>
+      <li><a style="text-decoration:none" href="#">Help</a></li>
+    </ul>
+    <div fxLayoutAlign="center">
+      <span><footer style="font-size: 11px!important;
+        line-height: 1.465!important;color: #555!important;">&copy;2020,Eshoping.com </footer>
+      </span>
+    </div>
+
+
+
+  </div>
+
+
+

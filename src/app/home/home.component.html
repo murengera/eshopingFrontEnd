@@ -1,0 +1,139 @@
+<mat-toolbar style="background: white"></mat-toolbar>
+<div fxLayout="row">
+    <div>
+        <app-product-category></app-product-category>
+      </div>
+<div>
+  <app-carousel></app-carousel>
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!--
+<div>
+
+<div fxLayout="row  wrap"   fxLayout.xs="column" fxLayoutGap="1px" fxLayoutGap="16px" class="align">
+  <mat-card    fxFlex.lg="calc(33% - 16px)" fxFlex.lt-lg="calc(50% - 16px)" fxFlex.xs="calc(100% - 16px)" *ngFor="let product of productss">
+
+  <img src="../../assets/gallery-image-1.jpg" alt="{{product.title}}"  >
+
+<mat-card-content>
+  <div>
+
+      <mat-card-title-group>
+          <mat-card-title >
+              <p id="title" (click)="selectProduct(product.id)">{{product.title.substr(0,40) | titlecase}}</p>
+
+
+              </mat-card-title>
+
+<mat-card-subtitle><p id="desp">{{product.description.substr(0,40)}} ...</p></mat-card-subtitle>
+<mat-card-title fxLayout="row">
+<p id="money" >  {{product.currency}}{{product.price}}</p>
+
+</mat-card-title>
+      </mat-card-title-group>
+
+
+
+</div>
+
+<div>
+    <mat-card-actions fxLayout="row">
+      <div id="preview"><span>Preview</span></div>
+  <div>
+    <button id="addToCart" [class.disabled]='product.total_quantity_in_stock<1' [class.disableCorl]='product.total_quantity_in_stock<1'(click)="AddToCart(product.id)">
+        {{product.total_quantity_in_stock <1 ? "NO STOCK":"Add to Cart"}}
+        </button></div>
+
+        </mat-card-actions>
+</div>
+
+
+
+</mat-card-content>
+
+    </mat-card>
+    </div>
+
+
+
+
+</div>
+-->
+
+
+
+
+
+
+
+  <div id="container" fxLayout="row wrap"   fxLayout.xs="column"     fxLayoutGap=".8%" fxLayoutAlign="center"   >
+
+
+
+
+             <mat-card class="example-card"   *ngFor="let product of productss "    >
+                <img src="../../assets/gallery-image-1.jpg"  id="images" >
+
+      <mat-card-content>cle
+          <div>
+
+              <mat-card-title-group>
+                  <mat-card-title fxLayout="row">
+                      <p id="title">{{product.title}}</p>
+
+
+                  </mat-card-title>
+
+
+
+                  <mat-card-title >
+
+
+                      </mat-card-title>
+
+
+              </mat-card-title-group>
+
+
+
+        </div>
+
+        <div>
+            <mat-card-actions fxLayout="column">
+
+          <div>
+            <button id="addToCart" (click)="AddToCart(product.id)">
+            <span>Add to Cart</span>
+                </button></div>
+                <div>
+
+<span id="wishList">Add to wish list<mat-icon style="font-size: 11px;
+  margin-top: 17px;">play_arrow</mat-icon> </span>
+                </div>
+
+                </mat-card-actions>
+        </div>
+
+
+
+        </mat-card-content>
+
+</mat-card>
+  </div>
+
+
+
+
+
+
+
+
+

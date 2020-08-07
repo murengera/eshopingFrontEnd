@@ -1,0 +1,66 @@
+
+
+ <mat-toolbar id="tool2" fxLayout="row"  fxLayoutGap="60%" fxLayoutGap.xs="18%" >
+
+<div fxLayout="row"  fxLayoutGap="10%" style="margin-top: -100%">
+  <div> <mat-icon style="font-size: 12px;color: #2c7986;">phone</mat-icon><span style="font-size: 10px;font-style: italic">+250784870429</span> </div>
+  <div> <mat-icon style="font-size: 12px;color: #2c7986;" >mail_outline</mat-icon><span style="font-size: 10px;font-style: italic">eshoping@gmail.com </span> </div>
+  <div> <mat-icon style="font-size: 12px;color: #2c7986;"  >place</mat-icon><span style="font-size: 10px;font-style: italic">12 KN kigali</span> </div>
+</div>
+
+<div style="margin-top: -21%"  >
+    <div > <mat-icon style="font-size: 12px;color:#2c7986 " >account_circle</mat-icon><span style="font-size: 10px;font-style: italic">My Account</span> </div>
+</div>
+
+
+ </mat-toolbar>
+ <mat-divider></mat-divider>
+
+
+ <mat-toolbar color="primary" id="toolbar" fxLayout="row" fxLayoutGap="45%"  fxLayoutGap.xs="40%">
+
+
+
+        <div fxLayout="row"  fxLayoutAlign="center"  fxLayoutGap="200%" fxLayoutGap.xs="50px" >
+
+          <div fxFlexOffset="3%" style="margin-top: 400%">
+                <ng-content >
+
+                  </ng-content>
+
+            </div>
+
+
+                  <div  fxHide.xs="true"  (ngSubmit)="restaurantSearch($event)" >
+
+                         <input    [(ngModel)]="searchText"  type="text" name="" placeholder="Search here" id="searchInput"   [ngModelOptions]="{standalone: true}" > <span><button id="searchButton">Search</button></span>
+                  </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+<div fxLayout="row"  fxLayoutGap="25%" >
+ <span   >
+ <span>  <mat-icon (click)="openDialogy()"  [matBadge]='cartData.data[0].numInCart != 0 ? cartData.data.length :0' matBadgeOverlap="true"  style="font-size: 16px;cursor:pointer" >shopping_cart</mat-icon> </span>
+
+
+ </span>
+ <span routerLink="/order" style="font-size: 10px;font-style: italic"> Order</span>
+ <span  routerLink="/checkout" style="font-size: 10px;font-style: italic;cursor: pointer;">Check Out</span>
+
+</div>
+
+      </mat-toolbar>
+      <mat-divider></mat-divider>
+
+
+
+

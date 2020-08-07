@@ -1,0 +1,25 @@
+<div class="carousel-container">
+  <div id="search-product-wrapper"  [ngStyle]="{'background': ' url(' + current_image  + ') 0'}">
+    <div id="search-product">
+          <h3 class="search-header-text">
+              <b>Search</b> for products &amp; find <b>verified sellers</b> near you</h3>
+          <div id="search-area">
+              <div class="dropdown">
+                  <button class="dropbtn" id="searchPlaceDP">
+                      <span><mat-icon>location_on</mat-icon></span>
+                      <span id="usercity">Rwanda</span>
+                      <span><mat-icon>keyboard_arrow_down</mat-icon></span>
+                  </button>
+                  <div id="searchPlaces" class="dropdown-content">
+                      <input type="text" placeholder="Search your city" id="searchPlaceInput" class="srin ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+
+                  </div>
+              </div>
+              <input type="text" id="search-input" placeholder="Enter product/service name" name="ss" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+              <button id="searchButton" mat-raised-button color="primary" >
+                <mat-icon aria-label="">search</mat-icon>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>

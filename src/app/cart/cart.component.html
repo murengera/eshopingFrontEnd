@@ -1,0 +1,82 @@
+<div class="container" >
+  <!--When the cart is empty-->
+
+<div *ngIf="cartData.data[0].numInCart===0;" style="margin-top: 50%" >
+  <h4>Your cart Empty</h4>
+
+
+  <button mat-flat-button routerLink="/" color="primary"> GO TO SHOP</button>
+
+
+</div>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+<!--when the cart has some items-->
+  <ng-container >
+  <div *ngIf="cartData.data[0].numInCart > 0">
+      <table id="table">
+         <thead>
+           <tr>
+             <th class="headerTitle">Image</th>
+             <th class="headerTitle">Title</th>
+             <th class="headerTitle">Price</th>
+             <th class="headerTitle">Quantity</th>
+             <th class="headerTitle">Subtotal</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let c of  cartData.data; let  i=index">
+             <td>
+             <img src="../../assets/gallery-image-2.jpg" alt="{{c.product.name}}"  id="Headerimages">
+             <span  id="delete"  (click)="cartService.deleteProductFromCart(i)" >delete</span>
+             </td>
+             <td>
+             <p id="headerTtile">{{c.product.title}}</p>
+             </td>
+            <td><p>{{c.product.price | currency:'USD'}}</p></td>
+
+            <td>
+              <form>
+                <div  id="descrease" (click)="changeQuantity(i,false)">-
+                </div>
+
+            <input type="number" id="number" [value]="c.numInCart" readonly [max]="c.product.quantity" >
+            <div  id="increase" (click)="changeQuantity(i,true)">+
+            </div>
+
+            <td>
+            <p>{{cartService.calculateSubTotal(i) | currency:'USD'}}</p>
+
+            </td>
+
+             </form>
+           </tr>
+           <td style="border:none;"></td>
+           <td></td>
+           <td></td>
+           <td>TOTAL</td>
+          <td id="total"> {{cartTotal | currency:'USD'}}</td>
+           <td></td>
+           <tr>
+
+           </tr>
+         </tbody>
+
+          </table>
+  </div>
+
+  <div fxLayout="row">
+    <a routerLink="/checkout">checkout</a>
+    <a routerLink="/"> continue Shopping</a>
+  </div>
+  </ng-container>
+
+</div>
+

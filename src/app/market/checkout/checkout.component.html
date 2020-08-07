@@ -1,0 +1,49 @@
+
+<ngx-spinner
+bdColor="rgb(151,149,149,0.4"
+size="large"
+color="orange"
+type="ball-clip-rotate-pulse"
+fullscreen="true">
+<p style="font-size: 20px;color:black">Booking Order...</p>
+
+</ngx-spinner>
+
+
+
+<div fxLayout="column" fxLayoutAlign="end" id="checkoutContainer">
+<div><h3>YOUR ORDER</h3></div>
+<div fxLayout="row">
+  <div><strong>PRODUCT</strong></div>
+  <div><strong>TOTAL</strong></div>
+</div>
+  <div fxLayout="row" *ngFor="let c of cartData.data">
+
+  <div>{{c.numInCart}} x {{c.product.title}}</div>
+  <div>{{(c.product.price * c.numInCart) | currency:'USD'}}</div>
+  </div>
+
+  <div fxLayout="column">
+    <div>shipping</div>
+    <div><strong>FREE</strong></div>
+  </div>
+  <div fxLayout="row">
+    <div>TOTAL</div>
+  <div><strong>{{cartTotal |currency:'USD'}}</strong></div>
+
+  </div>
+  <div fxLayout="row">
+
+    <div>Direct Bank Transfer</div>
+    <div>CHeck Payment</div>
+
+
+  </div>
+
+
+  <div>
+  <div><button (click)="onCheckout()">PLACE ORDER}</button></div>
+  </div>
+
+</div>
+

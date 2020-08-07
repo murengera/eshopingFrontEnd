@@ -1,0 +1,72 @@
+
+
+
+<div *ngIf="cartData.data[0].numInCart != 0">
+
+    <mat-card class="example-card" fxLayout="column" fxLayoutGap="10%" >
+
+
+      <div fxLayout="row" *ngFor="let c of cartData.data; let i=index ">
+
+          <mat-card-header fxLayout="column">
+
+              <img  src="../../../assets/gallery-image-1.jpg"  id="cardImage" alt="{{c.product.title}}">
+              <button id="cardDeleteButton" (click)="cartService.deleteProductFromCart(i)">Delete</button>
+              </mat-card-header>
+              <div>
+                  <mat-card-content fxLayout="column">
+
+                      <h3 id="name"> {{c.product.title}}</h3>
+                      <small id="selected"> {{cartData.data[0].numInCart !=0 ? cartData.data.length : 0}} Item(s) selected</small>
+
+                      <h4 id="currencies"><span>{{c.numInCart}} x </span>{{c.product?.price | currency:'USD'}}</h4>
+
+
+                      </mat-card-content>
+              </div>
+
+      </div>
+
+
+      <div>
+
+          <div>
+              <mat-card-actions fxLayout="column" >
+
+                   <h5 id="total">Total:{{cartTotal | currency:'USD'}}</h5>
+                   <div fxLayout="row" fxLayoutGap="20%">
+                     <div>
+                        <p id="viewCart" routerLink="/cart"> View Cart</p>
+                     </div>
+                     <div>
+                        <p id="checkout" routerLink="checkout" >Checkout </p>
+                     </div>
+                   </div>
+
+
+
+
+           </mat-card-actions>
+
+           </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </mat-card>
+
+
+
+
+
+</div>
