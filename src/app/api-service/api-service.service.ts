@@ -11,8 +11,9 @@ import { JsonPipe } from '@angular/common';
   providedIn: 'root'
 })
 export class ApiServiceService {
-private apiRoot=environment.SERVER_URL;
-private accountRoot=environment.ACCOUNT_URL
+
+private apiRoot="http://127.0.0.1:8000/api/";
+private accountRoot="http://127.0.0.1:8000/accouunt/"
 public isLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
 token = null;
